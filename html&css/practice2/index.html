@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+     
+        <h2>Registration Form</h2>
+
+        <form>
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td>
+                        <input type="text" placeholder="Enter your name" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Password:</td>
+                    <td>
+                        <input type="password" placeholder="Enter password" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Address:</td>
+                    <td>
+                        <textarea rows="3" placeholder="Enter address"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Game:</td>
+                    <td>
+                        <input type="checkbox">  <span>Cricket</span>
+                        <input type="checkbox"> <span> Football</span>
+                        <input type="checkbox"> <span>Badminton</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" name="gender"> <span>Male</span> 
+                        <input type="radio" name="gender"> <span>Female</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Age:</td>
+                    <td>
+                        <select>
+                            <option>Select Age</option>
+                            <option>18-20</option>
+                            <option>21-25</option>
+                            <option>26-30</option>
+                            <option>30+</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Photo:</td>
+                    <td>
+                        <input type="file">
+                    </td>
+                </tr>
+
+                <tr class="buttons">
+                    <td colspan="2">
+                        <input type="button" value="Save">
+                        <input type="reset" value="Reset">
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+  
+
+</body>
+</html>
