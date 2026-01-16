@@ -1,0 +1,152 @@
+<!-- practice 3:Design a travel blog homepage using SCSS with nested selectors and variables.
+
+> Top banner with blog title and subtitle.
+> Grid layout for blog posts preview.
+> Sidebar with categories list.
+> Featured destination highlight box.
+> Footer with newsletter signup. -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WanderVerse Travel Blog</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-earth-americas"></i>
+                <p>The World Travel Guy</p>
+            </div>
+             
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#" style="color:#ff8a65;">HOME</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">DESTINATION</a></li>
+                    <li><a href="#">CATEGORIES</a></li>  
+                    <li><a href="#">GALLERY</a></li> 
+                    <li><a href="#">ABOUT</a></li> 
+                    <li><a href="#">CONTACT</a></li>
+                    <li>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="hero-section">
+                <div class="text1">EXPLORE.&nbsp;&nbsp;DREAM.&nbsp;&nbsp;DISCOVER.</div>
+                <div class="text2">This is world travel blog featuring beautiful destinations,new experiences,and hidden places around the globe.</div>
+                <div class="text3">Please tag along!</div>
+                <button class="text">START EXPLORING</button>
+            </div>
+        </section>
+
+        <section>
+            <div class="head1">SOME RECENT BLOGS</div>
+             
+        </section>
+
+        <section>
+            <div class="a1">
+                <div class="b1">
+                    <div class="c1">
+                        <div class="d1">
+                            <div class="img1"></div>
+                            <div class="T">Adventure Travel</div>
+                            <div class="desc">"Thrilling activities like hiking, climbing, rafting, or safaris."</div>
+                        </div>
+                        <div class="d2">
+                            <div class="img2"></div>
+                            <div class="T">Cultural & Heritage Travel</div>
+                            <div class="desc"> "Exploring history, traditions, arts, and local life."</div>
+                        </div>
+                    </div>
+                    <div class="c2">
+                        <div class="d3">
+                            <div class="img3"></div>
+                            <div class="T">Sports Travel</div>
+                            <div class="desc"> "Attending or participating in sporting events." </div>
+                        </div>
+                        <div class="d4">
+                            <div class="img4"></div>
+                            <div class="T">Culinary/Gastronomy Travel</div>
+                            <div class="desc">  "Focused on food, cooking classes, and local markets."</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="b2">
+                    <div class="category">Types of Travel</div>
+                    <div class="purpose">By Purpose / Interest</div>
+                    <div class="list">
+                        <ul>
+                        <li>Adventure Travel</li> 
+                        <li>Cultural & Heritage Travel</li>
+                        <li>Sports Travel</li>
+                        <li>Culinary/Gastronomy Travel</li>
+                        <li>Eco & Sustainable Travel</li>
+                    </ul>
+                    </div>
+                    <div class="style">By Travel Style</div>
+                     <div class="list">
+                        <ul>
+                        <li>Solo travel</li> 
+                        <li>Couple Travel</li>
+                        <li>Group Travel</li>
+                        <li>Luxury Travel</li>
+                        <li>Budget Travel</li>
+                    </ul>
+                     </div>
+                    <div class="mode">By Geography</div>
+                    <div class="list">
+                        <ul>
+                        <li>Domestic Travel</li> 
+                        <li>International Travel</li>
+                        <li>Regional Travel</li>
+                        <li>Urban Travel</li>
+                        <li>Cruise Travel</li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="newsletter">
+                <h2>Subscribe to our Newsletter</h2>
+                <p>Get the latest travel updates and exclusive offers straight to your inbox.</p>
+                <form class="subscription-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 WanderVerse Travel Blog. All rights reserved.
+        </div>
+    </footer>
+
+  
+
+</body>
+</html>
