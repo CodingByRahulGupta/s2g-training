@@ -1,0 +1,123 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif,arial,serif;
+    // display: flex;
+}
+
+.nav-bar{
+    height:70px;
+    width:100%;
+    background-color: rgb(193, 170, 170);
+    display:flex;
+    justify-content: space-between;
+
+    .nav-logo{
+        width:16%;
+        margin-top:1.5rem;
+        margin-left:3rem;
+    }
+
+    .nav-links{
+        width:59%;
+        margin-top: 1.5rem;
+        display:flex;
+        justify-content:space-between;
+    }
+
+    .nav-actions{
+        width:25%;
+        display: flex;
+        justify-content: space-around;
+
+
+        .down-load{
+            display:flex;
+            margin-top:1.5rem;
+
+            .down-img{
+                width:1rem;
+                height:1rem;
+                 
+            }
+        }
+
+        button{
+            display:flex;
+            border:2px solid black;
+            height:3rem;
+            width:6rem;
+            margin-top:1rem;
+
+
+            .log-img{
+                width:2rem;
+                height:2rem;
+            }
+        }
+    }
+
+
+}
+
+
+// login page 
+.login-page{
+    height:400px;
+    width:300px;
+    // border:2px solid black;
+    // justify-content: center;
+    // align-items: center;
+    margin-left: 500px;
+    margin-top:100px;
+
+    p{
+        margin-top:0.5rem;
+    }
+
+    h1{
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+
+    .fill{
+        height:2rem;
+        width:100%;
+        border:1px solid gray;
+        margin-top:0.25rem
+         
+    }
+
+    button{
+        height:2rem;
+        width:100%;
+        border:1px solid gray;
+        background-color: blue;
+        color:white;
+    }
+
+    social-login{
+         height:2rem;
+         width:100%;
+         justify-content: space-around;
+
+    }
+
+    ul{
+        justify-content: space-between;
+
+        li{
+            border:1px solid gray;
+            padding:0.35rem;
+            margin-top:0.75rem;
+        }
+    }
+
+    .sign-up{
+        text-decoration:underline;
+        color:blue;
+        margin-top: 0.5rem;
+        margin-left:4.75rem;
+
+    }
+}
