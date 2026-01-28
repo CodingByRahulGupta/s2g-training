@@ -1,3 +1,198 @@
+// Variables
+$hero-img: '20221118.jpg';
+$breakpoint-mobile: 600px;
+$text-dark: #333;
+$text-light: #fff;
+
+// Base Mobile Styles (under 600px)
+.hero {
+  display: flex;
+  flex-direction: column; // Stack image above text
+  width: 100%;
+
+  // Create the image area at the top
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9; // Keeps image proportional on phones
+    background: url($hero-img) center/cover no-repeat;
+  }
+
+  .hero-content {
+    padding: 40px 20px;
+    background: #f9f9f9;
+    color: $text-dark;
+    text-align: center; // Center text on mobile
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+  }
+
+  // Desktop/Tablet Styles (600px and up)
+  @media (min-width: $breakpoint-mobile) {
+    height: 100vh; // Full screen height
+    background: url($hero-img) center/cover no-repeat;
+    flex-direction: row; // Reset to horizontal
+    align-items: center; // Center content vertically
+    justify-content: flex-start; // Push content to the left
+    padding-left: 10%; // Left margin for desktop text
+
+    &::before {
+      display: none; // Remove the mobile top-image
+    }
+
+    .hero-content {
+      background: rgba(0, 0, 0, 0.4); // Semi-transparent overlay for readability
+      color: $text-light;
+      text-align: left; // Align text to the left
+      padding: 40px;
+      max-width: 450px;
+      border-radius: 8px;
+      backdrop-filter: blur(5px); // Modern 2026 glass effect
+    }
+  }
+}
+
+
+
+// /* Base styles (Desktop: Image full screen, Text centered) */
+// .img {
+//   background-image: url('20221118.jpg');
+//   background-size: cover;
+//   background-position: center;
+//   height: 100vh; /* Full screen height */
+//   width: 100%;
+//   display: flex;
+//  align-items: center;
+//  justify-content: center;
+//   text-align: center;
+// }
+
+// .text {
+//   background: rgba(0, 0, 0, 0.6); /* Overlay for readability */
+//   color: white;
+//   padding: 20px;
+// }
+
+// /* Mobile styles (Screens smaller than 768px) */
+// @media (max-width: 600px) {
+//   .img {
+//     flex-direction: column; /* Stack vertically */
+//     height: auto; /* Allow height to grow based on text */
+//     display: block; /* Change to block to allow text to flow below */
+//   }
+
+//   /* Make a fixed-height "header" for the image at the top */
+//   .img::before {
+//     content: "";
+//     display: block;
+//     height: 300px; /* Adjust image height for mobile */
+//     width: 100%;
+//   }
+
+//   .text {
+//     background: #fff; /* Switch to solid background for clarity */
+//     color: #333;
+//     padding: 40px 20px;
+//   }
+// }
+
+
+// // 1. Define Variables
+// $primary-text: #333;
+// $overlay-text: #fff;
+// $overlay-bg: rgba(0, 0, 0, 0.6);
+// $breakpoint-tablet: 768px;
+// $hero-image: '20221118.jpg';
+
+// // 2. Mixin for flex centering (Desktop)
+// @mixin flex-center {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   text-align: center;
+// }
+
+// // 3. Main Styles
+// .img {
+//   width: 100%;
+//   position: relative;
+  
+//   // Mobile: Show image as a block at the top
+//   &::before {
+//     content: "";
+//     display: block;
+//     width: 100%;
+//     aspect-ratio: 16 / 9; // Keeps image proportional
+//     background: url($hero-image) center/cover no-repeat;
+//   }
+
+//   .text {
+//     padding: 40px 20px;
+//     color: $primary-text;
+//     background: #fff;
+//     font-family: sans-serif;
+
+//     p:first-child {
+//       font-size: 1.8rem;
+//       font-weight: bold;
+//       margin-bottom: 10px;
+       
+//     }
+//   }
+
+//   // Desktop Upgrade (Tablet & Up)
+//   @media (min-width: $breakpoint-tablet) {
+//     @include flex-center;
+//     height: 100vh;
+//     background: url($hero-image) center/cover no-repeat;
+
+//     // Remove the mobile-only spacer
+//     &::before { display: none; }
+
+//     .text {
+//       background: $overlay-bg;
+//       color: $overlay-text;
+//       border-radius: 8px;
+//       max-width: 600px;
+//       padding: 30px;
+      
+//     }
+//   }
+// }
+
+
+
+// .img{
+//         height:100vh;
+//         width:100%;
+//         background-image: url("20221118.jpg");
+//         background-size: cover;
+//         background-position: center;
+//         margin-bottom:1rem;
+     
+
+
+//     .text{
+//         color:red;
+//         font-size:2rem;
+//         padding-left:3rem;
+//         padding-top:10rem;
+//     }
+//     @media(max-width:600px){
+//         .text{
+//             font-size:2rem;
+//             color:brown;
+//             // -top:100vh;
+//             align-items: center;
+//         }
+//     }
+// }
+
+
 .container{
     height:100%;
     width:100%;
@@ -6,10 +201,23 @@
     background-color: yellow;
     .box{
         width:100%;
-        height:18rem;
+        height:350px;
         background-color: red;
         margin:1rem;
 
+    }
+
+    .box-img{
+        width:90%;
+        height:250px;
+        padding:1rem;
+        align-items: center;
+
+        img{
+            width:100%;
+            height:100%;
+            object-fit: cover;
+        }
     }
     
         @media(max-width:600px){
@@ -20,5 +228,7 @@
                 background-color: blue;
             }
         }
+
+
     
 }

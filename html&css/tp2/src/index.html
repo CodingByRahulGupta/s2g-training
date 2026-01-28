@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy</title>
+    <link rel="stylesheet" href="output.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+    <header class=" relative shadow-lg px-3 py-2">
+        <nav class="flex justify-between lg:w-[90%] md:w-full mx-auto">
+            <div class="w-[130px] md:w-[180px]  flex items-center">
+                <img class=" cursor-pointer" src="../images/logo.jpg" >
+            </div>
+            <div class="flex items-center gap-3">
+                <div
+                    class="navLinks z-30 duration-500 absolute md:static md:w-auto w-full md:h-auto h-[50vh] bg-white flex md:items-center gap-[1.5vw] top-[100%] left-[-100%] px-5 md:py-0 py-5 ">
+                    <ul
+                        class="font-semibold flex md:flex-row flex-col md:items-center md:gap-[2vw] xl:gap-6 gap-1 lg:text-lg text-xs text-[#3C598A]">
+                        <li
+                            class="relative max-w-fit pr-3 md:pr-0 py-1  after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 text-base font-bold">
+                            <a href="#">Home<ion-icon class="align-middle" name="chevron-down-outline"></ion-icon></a>
+                            <span
+                                class="absolute -top-1 -right-2 bg-[#DC3545] text-white text-[10px] rounded-sm px-2">New</span>
+                        </li>
+                        <li
+                            class=" max-w-fit pr-3 md:pr-0 py-1   after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 text-base font-bold">
+                            <a href="#">About</a>
+                        </li>
+                        <li
+                            class=" max-w-fit pr-3 md:pr-0 py-1   after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 text-base font-bold">
+                            <a href="#">Services<ion-icon class="align-middle"
+                                    name="chevron-down-outline"></ion-icon></a>
+                        </li>
+                        <li
+                            class=" max-w-fit pr-3 md:pr-0 py-1  after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 text-base font-bold">
+                            <a href="#">Blogs<ion-icon class="align-middle" name="chevron-down-outline"></ion-icon></a>
+                        </li>
+                        <li
+                            class="relative max-w-fit pr-3 md:pr-0 py-1    after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 text-base font-bold">
+                            <a href="#">Pages<ion-icon class="align-middle" name="chevron-down-outline"></ion-icon></a>
+                            <span
+                                class="absolute -top-1 -right-2 bg-[#DC3545] text-white text-[10px] rounded-sm px-2">New</span>
+                        </li>
+                        <li
+                            class=" max-w-fit pr-3 md:pr-0 py-1    after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 text-base font-bold">
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="w-[2px] h-10 bg-[#07CCEC] hidden xl:flex">
+                <div class="flex items-center gap-6">
+
+
+                    <div class="hidden xl:flex items-center lg:gap-5 gap-1 relative text-[#3C598A]">
+                        <div class="relative  pt-1 px-1   rounded-full shadow-sm cursor-pointer">
+                            <ion-icon size="small" name="heart-outline"></ion-icon>
+                            <span
+                                class="absolute -top-1 -right-2 bg-[#07CCEC] text-white text-xs rounded-full px-1">0</span>
+                        </div>
+
+                        <div class="relative pt-1 rounded-full shadow-sm px-1 cursor-pointer">
+                            <ion-icon size="small" name="cart-outline"></ion-icon>
+                            <span
+                                class="absolute -top-1 -right-2 bg-[#07CCEC] text-white text-xs rounded-full px-1">3</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2 relative lg:ml-5 ml-2 text-white">
+                        <button
+                            class="size-8 rounded-full bg-[#07CCEC]  border-4 border-white absolute right-29 text-white xl:flex hidden">
+                            <ion-icon class="ml-1 mt-1" name="calendar"></ion-icon>
+                        </button>
+                        <button type="button"
+                            class=" hover:bg-sky-600 bg-[#07CCEC] border-solid   font-semibold text-sm text-white px-7 py-3 rounded-full xl:flex hidden cursor-pointer">Appoinment</button>
+                        <ion-icon
+                            class="md:bg-white md:hidden bg-[#07CCEC] md:border-0 border rounded-full md:p-0 p-2 z-30"
+                            name="menu" onclick="onMenuToggle(this)"
+                            class="text-[30px] cursor-pointer md:hidden"></ion-icon>
+                    </div>
+                </div>
+        </nav>
+        <script>
+            function onMenuToggle(e) {
+                const navlinks = document.querySelector(".navLinks");
+                e.name = e.name === "menu" ? "close" : "menu";
+                navlinks.classList.toggle("left-[0%]");
+            }
+
+        </script>
+    </header>
+    <hr class="h-[3px] w-full bg-[#3C598A]">
+
+    <section class="w-full">
+        <div class="bg-[url(../images/bg-4.jpg)] min-h-[34vh] sm:min-h-[40vh] md:min-h-[58vh] lg:min-h-[80vh] xl:min-h-[90vh] bg-cover bg-center flex items-center">
+
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
+
+                <div class="max-w-xl space-y-4 md:space-y-6">
+
+                    <p class="text-[#07CCEC] font-cur font-semibold text-xl sm:text-2xl md:text-3xl">
+                        Our People And Society
+                    </p>
+
+                    <h1 class="font-head font-bold text-[#27477D] text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+                        Best Treatment for
+                    </h1>
+
+                    <h1 class="font-head font-bold text-[#07CCEC] text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+                        Healthy Life
+                    </h1>
+                    <p class="hidden md:block text-gray-800 text-sm lg:text-lg leading-relaxed">
+                        Conveniently drive go forward architectures with future-proof growth
+                        strategies. Energistically supply low-risk high-yield process
+                        improvements for mission-critical testing procedures.
+                    </p>
+                    <div class="relative mt-6 flex items-center">
+                        <button class="w-10 h-10 flex items-center justify-center rounded-full
+                   bg-[#07CCEC] border-4 border-white absolute -left-2 text-white">
+                            <ion-icon name="flash"></ion-icon>
+                        </button>
+
+                        <button class="bg-[#07CCEC] text-white rounded-full
+                   py-3 px-6 pl-12 text-sm sm:text-base
+                   hover:bg-sky-500 transition cursor-pointer   ">
+                            View all Services
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-[url(../images/callbg.png)] bg-cover  w-full h-auto py-10">
+        <section
+            class="grid grid-cols-1 md:grid-cols-2 lg:w-[80%] w-full  mx-auto h-auto   px-4 md:px-2 gap-10 overflow-hidden ">
+            <div class="relative xl:pl-20 flex justify-center py-20">
+                <img src="../images/grid-1.jpg" alt="" class="w-full max-w-[600px] object-cover">
+                <img src="../images/play.png" alt="" class="absolute top-[65%] left-[40%] -translate-x-1/2 -translate-y-1/2 rounded-full w-24 h-24 cursor-pointer">
+            </div>
+            <div class=" md:pt-40 xl:pr-28 px-4">
+                <h2 class="font-head md:text-3xl lg:text-[40px] text-2xl text-[#27477D] font-bold">Suprise your body<br class="md:flex hidden"> with <strong class="text-[#07CCEC]">extra care..</strong></h2>
+                <p class="md:text-sm text-sm text-[#8590B4] lg:mt-4 md:mt-4 mt-6">Rapidiously evisculate user-centric functionalities    for higher    efficient interfaces. completetly leverage other's scalable technology before synergistic    manufactures    products</p>
+                <div class="lg:mt-10 md:mt-4 flex mt-4 shadow-sm lg:w-[20vw] md:w-[35vw] w-[80vw] bg-white">
+                    <div class="flex text-[#07CCEC]">
+                        <hr class="w-[3px] h-20 bg-[#07CCEC] flex">
+                        <ion-icon class="my-auto ml-6" size="large" name="call"></ion-icon>
+                    </div>
+                    <div class="my-auto ml-6">
+                        <p class="text-gray-600 text-sm">Call Anytime 24/7</p>
+                        <p class="text-lg text-[#27477D] font-bold">+44-1234-5996</p>
+                    </div>
+                </div>
+                <button class="bg-[#07CCEC] text-white py-3 px-6 lg:mt-6 md:mt-4 rounded-3xl mt-4 cursor-pointer">
+                    Learn More
+                </button>
+            </div>
+        </section>
+    </div>
+
+
+    <section class="w-full">
+        <div class="h-[520px] bg-[url(../images/bg-2.webp)] bg-cover bg-center">
+            <div class="bg-[#69c8ee55] h-full text-center pt-20">
+                <h2 class="font-cur text-sky-700 text-3xl">Medical and General Care!</h2>
+                <h3 class="text-5xl text-white font-head font-bold mt-4">
+                    Amazing Services
+                </h3>
+                <p class="text-white mt-8 font-semibold text-lg px-4">
+                    Proactively revolutionize granular customer service after
+                    pandemic internal or <br class="hidden md:block">
+                    "organic" sources instinctively impact proactive human
+                </p>
+            </div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 lg:w-[65%] md:w-[90%] w-[90%]   mx-auto mt-[-120px] md:mt-[-160px] lg:mt-[-180px]">
+            <div class="bg-white rounded-2xl text-center overflow-hidden shadow-sm">
+                <h2 class="text-3xl mt-10 text-[#27477D] font-semibold">Haematology</h2>
+                <p class="mx-4 mt-4 text-gray-600 text-sm">Continually evisculate goal-oriented portals    rather than prospective channels. Appropriately    customize excellent imperatives for mission-critical products.
+                </p>
+                <div class="relative mt-24">
+                    <img class="size-28 border-8 rounded-full border-white absolute left-1/2 -top-14 -translate-x-1/2"
+                        src="../images/card1logo.webp" alt="">
+                    <button class="size-14 rounded-full bg-sky-800 border-8 border-white 
+                           absolute left-1/2 -top-22 -translate-x-1/2 text-white z-10">
+                        <ion-icon name="arrow-forward"></ion-icon>
+                    </button>
+                    <img class="w-full rounded-t-[120px]" src="../images/card-1.webp" alt="">
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl text-center overflow-hidden shadow-sm">
+                <h2 class="text-3xl mt-10 text-[#27477D] font-semibold">Pediatrician</h2>
+                <p class="mx-4 mt-4 text-gray-600 text-sm">Continually evisculate goal-oriented portals rather than prospective channels. Appropriately customize excellent imperatives for mission- critical products.
+                </p>
+                <div class="relative mt-24">
+                    <img class="size-28 border-8 rounded-full border-white absolute left-1/2 -top-14 -translate-x-1/2"
+                        src="../images/card2logo.avif" alt="">
+                    <button class="size-14 rounded-full bg-sky-800 border-8 border-white 
+                           absolute left-1/2 -top-22 -translate-x-1/2 text-white z-10">
+                        <ion-icon name="arrow-forward"></ion-icon>
+                    </button>
+                    <img class="w-full rounded-t-[120px]" src="../images/card-2.jpg" alt="">
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl text-center overflow-hidden shadow-sm">
+                <h2 class="text-3xl mt-10 text-[#27477D] font-semibold">Cardiologist</h2>
+                <p class="mx-4 mt-4 text-gray-600 text-sm">Continually evisculate goal-oriented portals rather than prospective channels. Appropriately customize excellent imperatives for mission-critical products.
+                </p>
+                <div class="relative mt-24">
+                    <img class="size-28 border-8 rounded-full border-white absolute left-1/2 -top-14 -translate-x-1/2"
+                        src="../images/card3logo.webp" alt="">
+                    <button class="size-14 rounded-full bg-sky-800 border-8 border-white 
+                           absolute left-1/2 -top-22 -translate-x-1/2 text-white z-10">
+                        <ion-icon name="arrow-forward"></ion-icon>
+                    </button>
+                    <img class="w-full rounded-t-[120px]" src="../images/card3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lg:w-[65%] md:w-[90%] w-[90%]   mx-auto mt-24 md:mt-32 lg:mt-20   flex md:flex-row flex-col justify-between items-center gap-6">
+        <div class="flex items-center shadow-sm rounded-4xl px-6 py-4">
+            <ion-icon class=" text-[#07CCEC] mr-4" size="small" name="alert-circle-outline"></ion-icon>
+            <p class="text-sm">Delivering tomorrow's health care for your family.<strong class="text-[#07CCEC] ml-2 cursor-pointer"> View Doctor's Timetable <ion-icon name="arrow-forward-outline"></ion-icon>  </strong>
+            </p>
+        </div>
+        <div class="relative">
+            <button class="size-10 rounded-full bg-[#07CCEC] border-4 border-white  absolute -left-5 top-1/2 -translate-y-1/2 text-white">
+                <ion-icon name="calendar-outline"></ion-icon>
+            </button>
+            <button class="bg-[#07CCEC] rounded-3xl py-3 px-8 text-white font-semibold cursor-pointer">Make Appointment </button>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section class="w-[90%] lg:w-[65%] mx-auto">
+        <div class="mt-20 flex flex-col lg:flex-row  overflow-hidden">
+            <div class="lg:hidden w-full min-h-[260px] sm:min-h-[320px] bg-[url(../images/botdoc.webp)] bg-contain bg-center bg-no-repeat rounded-xl"> </div>
+            <div class="lg:w-[60%] lg:p-10 px-2">
+                <h2 class="text-[#07CCEC] font-cur text-3xl md:text-4xl">  7 Star care & Protection </h2>
+                <h2 class="font-head text-[#27477D] text-3xl md:text-4xl mt-2">  We love your loved ones </h2>
+                <p class="text-gray-500 mt-4 text-sm md:text-base">  Proactively revolutionize granular customer service after pandemic internal or "organic" sources. Distinctively impact proactive human capital rather than client-centered benefits.  </p>
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex gap-4">
+                        <img class="w-14 h-14" src="../images/item1.png" alt="">
+                        <div>
+                            <h2 class="text-lg font-semibold text-[#27477D]"> 100% Safe and Trusted </h2>
+                            <p class="text-sm text-gray-500">  Professional web-readiness via ubiquitous human capital </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <img class="w-14 h-14" src="../images/item2.png" alt="">
+                        <div>
+                            <h2 class="text-lg font-semibold text-[#27477D]">  Specialist Surgery </h2>
+                            <p class="text-sm text-gray-500">  Professional web-readiness via ubiquitous human capital </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <img class="w-14 h-14" src="../images/item3.png" alt="">
+                        <div>
+                            <h2 class="text-lg font-semibold text-[#27477D]"> 24/7 take care staff </h2>
+                            <p class="text-sm text-gray-500">   Professional web-readiness via ubiquitous human capital  </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <img class="w-14 h-14" src="../images/chemistry_icon_147471.webp" alt="">
+                        <div>
+                            <h2 class="text-lg font-semibold text-[#27477D]"> Medicine service </h2>
+                            <p class="text-sm text-gray-500">   Professional web-readiness via ubiquitous human capital  </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden lg:flex lg:flex-auto min-h-[420px] bg-[url(../images/botdoc.webp)] bg-contain bg-center bg-no-repeat">
+            </div>
+
+        </div>
+
+        <div class="mt-10  flex md:flex-row flex-col justify-center gap-10 shadow-sm md:rounded-full rounded-4xl md:px-0 px-4 py-8  md:w-[80%] w-full mx-auto">
+            <div class="border-2 border-sky-400 lg:w-[50%] w-auto h-12 my-auto text-[#07CCEC]  rounded-4xl py-2">
+                <ion-icon class="ml-4" name="mail"></ion-icon>
+                <input class="text-gray-600 text-lg ml-2" type="text" placeholder="Enter Your Email Address">
+            </div>
+            <div class=" relative my-auto mx-auto md:mx-0 text-white">
+                <button class="size-9 top-1 rounded-full bg-[#07CCEC]  border-4 border-white absolute ">
+                    <ion-icon class="" name="arrow-forward"></ion-icon> </button>
+                <button
+                    class="bg-[#07CCEC] rounded-4xl py-2 px-14 ml-5 text-white font-semibold text-lg cursor-pointer">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="w-full lg:px-[10%] md:px-[5%]  h-auto mt-10 bg-[#122A53] pb-16">
+        <div class="w-full md:h-[10%] h-[20%]  flex md:flex-row flex-col md:justify-between md:mx-0 mx-auto ">
+            <img class="lg:w-[12%] md:w-[20%] w-[30%] md:mx-0 mx-auto cursor-pointer" src="../images/logo.jpg" alt="">
+            <div class="text-gray-400 md:mx-0 mx-auto  md:mt-2 mt-2">
+                <ion-icon class="border rounded-full  p-2 ml-2 cursor-pointer" size="large" name="logo-facebook"></ion-icon>
+                <ion-icon class="border rounded-full  p-2 ml-2 cursor-pointer" size="large"  name="logo-twitter"></ion-icon>
+                <ion-icon class="border rounded-full  p-2 ml-2 cursor-pointer" size="large" name="globe"></ion-icon>
+                <ion-icon class="border rounded-full  p-2 ml-2 mr-2 cursor-pointer" size="large"  name="logo-linkedin"></ion-icon>
+            </div>
+        </div>
+
+        <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 lg:gap-16 py-10">
+            <div class="text-white px-4 md:px-0">
+                <h2 class="text-xl lg:text-2xl font-semibold">About Us</h2>
+                <hr class="w-12 h-1 mt-3 bg-white rounded-full">
+                <p class="mt-5 text-sm leading-relaxed">  Energistically reintermediate worldwide interfaces vis-a-vis emerging  integrate leadership skills
+                </p>
+                <p class="text-[#07CCEC] mt-4 text-lg cursor-pointer">  <ion-icon class="mr-2 align-middle cursor-pointer" name="call"></ion-icon> 693 2325 12459 </p>
+                <div class="mt-4 flex items-center gap-3">
+                    <img class="w-12 h-12 rounded-full object-cover" src="../images/doc.jpg" alt="">
+                    <p class="text-[#07CCEC] text-sm">
+                        <strong class="text-white block">David Smith</strong>
+                        Senior Consultant
+                    </p>
+                </div>
+            </div>
+            <div class="text-white px-4 md:px-0">
+                <h2 class="text-xl lg:text-2xl font-semibold">Services</h2>
+                <hr class="w-12 h-1 mt-3 bg-white rounded-full">
+                <ul class="mt-5 space-y-2 text-sm">
+                    <li><ion-icon class="mr-2 text-[#07CCEC]" name="arrow-forward"></ion-icon>Body Surgery</li>
+                    <li><ion-icon class="mr-2 text-[#07CCEC]" name="arrow-forward"></ion-icon>Major Operation</li>
+                    <li><ion-icon class="mr-2 text-[#07CCEC]" name="arrow-forward"></ion-icon>Child Care</li>
+                    <li><ion-icon class="mr-2 text-[#07CCEC]" name="arrow-forward"></ion-icon>Health Surgery</li>
+                    <li><ion-icon class="mr-2 text-[#07CCEC]" name="arrow-forward"></ion-icon>Mental Health</li>
+                    <li><ion-icon class="mr-2 text-[#07CCEC]" name="arrow-forward"></ion-icon>Urgent Care</li>
+                </ul>
+            </div>
+            <div class="text-white px-4 md:px-0">
+                <h2 class="text-xl lg:text-2xl font-semibold">Gallery Posts</h2>
+                <hr class="w-12 h-1 mt-3 bg-white rounded-full">
+                <div class="grid grid-cols-3 gap-3 mt-5">
+                    <img class="w-full aspect-square object-cover" src="../images/1.jpg">
+                    <img class="w-full aspect-square object-cover" src="../images/2.jpg">
+                    <img class="w-full aspect-square object-cover" src="../images/3.jpg">
+                    <img class="w-full aspect-square object-cover" src="../images/4.jpg">
+                    <img class="w-full aspect-square object-cover" src="../images/5.jpg">
+                    <img class="w-full aspect-square object-cover" src="../images/6.jpg">
+                </div>
+            </div>
+            <div class="text-white px-4 md:px-0">
+                <h2 class="text-xl lg:text-2xl font-semibold">Visiting Hours</h2>
+                <hr class="w-12 h-1 mt-3 bg-white rounded-full">
+                <div class="mt-5 space-y-4 text-sm">
+                    <div class="flex justify-between border-b border-dotted border-gray-500 pb-1"> <span>Mon - Fri</span> <span>8:00 am - 8:00 pm</span>
+                    </div>
+                    <div class="flex justify-between border-b border-dotted border-gray-500 pb-1">
+                              <span>Saturday</span>
+                        <span>9:00 am - 6:00 pm</span>
+                    </div>
+                    <div class="flex justify-between border-b border-dotted border-gray-500 pb-1">
+                        <span>Sunday</span>
+                        <span>9:00 am - 6:00 pm</span>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3 mt-6 text-[#07CCEC]">
+                    <ion-icon size="large" name="location-outline"></ion-icon>
+                    <a href="#" class="text-white underline text-lg leading-relaxed">
+                        374 William S Canning Blvd, Fall River MA 2721
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </footer>
+
+    <div class="  h-16 w-full bg-[#07CCEC] text-white flex  justify-between">
+        <p class="my-auto lg:ml-[10%] md:ml-[5%] ml-4">Copyright© 2026 Healthy.com. All rights reserved by Vecuro.</p>
+        <ol class="md:flex hidden gap-5 my-auto text-center">
+            <li><a href="">Privacy</a></li>
+            <li><a href="">Terms</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">About</a></li>
+        </ol>
+        <img class="justify-end mr-10 cursor-pointer" src="../images/upaarow.png" alt="">
+    </div>
+
+</body>
+
+</html>
